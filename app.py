@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-#from sklearn.model_selection import train_test_split
-#from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
 
 
 #import data
@@ -71,19 +71,21 @@ user_age = st.text_input("What is your Age?")
 
 
 #add button (if true st.button = ) if button ==True: 
-#user_complete = st.button("Calculate"):
+user_complete = st.button("Calculate")
+
+if user_compete == True:
 
 #creating user data
-User = pd.DataFrame(np.array([{user_income}, {user_education},{user_parent},{user_married},{user_female},{user_age}]).reshape(1,-1), 
+    User = pd.DataFrame(np.array([{user_income}, {user_education},{user_parent},{user_married},{user_female},{user_age}]).reshape(1,-1), 
                     columns=['income','education','parent','married','female','age'])
 #Predicting outcome
-model.predict(User)
+    model.predict(User)
 
-print(f"Predicted class: {model.predict(User)}")
+    print(f"Predicted class: {model.predict(User)}")
 
 #generating Probability of postivie class (=1)
-probs = model.predict_proba(User)
+    probs = model.predict_proba(User)
 
-print(f"Probability that this person has a linked in account: {probs[0][1]}")
+    print(f"Probability that this person has a linked in account: {probs[0][1]}")
 
 
