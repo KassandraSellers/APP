@@ -137,7 +137,7 @@ if user_complete == True:
     'parent' : parent,
     'married': married,
     'female' : female,
-    'age': age
+    'age': int(user_age)
 },index=[0])
 
     
