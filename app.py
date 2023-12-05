@@ -111,7 +111,7 @@ match user_parent:
         parent = 1
 
 match user_married:
-    case "0 -False":
+    case "0-False":
         married = 0
     case "1-True":
         married = 1
