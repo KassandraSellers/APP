@@ -51,11 +51,11 @@ st.markdown("Are you a LinkedIn user?")
 
 st.markdown("Answer the questions to find out!")
 
-income_list = list["1 = Less Than $10,000", "2":"10 to under $20,000", "3":"20 to under $30,000","4":"30 to under $40,000","5":"40 to under $50,000","6":"50 to under $75,000", "7":"75 to under $100,000","8":"100 to under $150,000","9":"$150,000 or more","10":"NA"]
+income_list = list["1" : "Less Than $10,000", "2":"10 to under $20,000", "3":"20 to under $30,000","4":"30 to under $40,000","5":"40 to under $50,000","6":"50 to under $75,000", "7":"75 to under $100,000","8":"100 to under $150,000","9":"$150,000 or more","10":"NA"]
 education_list = list["1":"Less than High School 1-8", "2":"No Diploma", "3":"High School Graduate", "4":"Some College, No Degree", "5":"Associate Degree","6":"Bachelor Degree","7":"Some postgraduate no degree","8":"Postgraduate or Professional Degree","9":"NA"]
 parent_list= list["0":"False", "1":"True"]
 married_list= list["0":"False", "1":"True"]
-gender_list= list["0":"Male", "1":"Female", "0"-"Other"]
+gender_list= list["0":"Male", "1":"Female", "0":"Other"]
 
 user_income = st.selectbox(label = "What is your income?, Options = income_list")
 
