@@ -149,5 +149,5 @@ if user_complete == True:
 
 
     st.write("Predicted class:",model.predict(User))
-    st.write("Probability that this person has a linked in account:",probs[0][1])
+    st.write("Probability that this person has a linked in account:",round(probs[0][1],2))
 
