@@ -51,15 +51,15 @@ st.markdown("<h4 style='text-align: center; color: grey;'>Are you a LinkedIn use
 st.markdown("<h4 style='text-align: center; color: grey;'>Answer the questions to find out!</h4>", unsafe_allow_html=True)
 
       
-user_income = st.selectbox(label = "What is your income?", options = ("1-Less Than $10,000", "2-10 to under $20,000", "3-20 to under $30,000","4-30 to under $40,000","5-40 to under $50,000","6-50 to under $75,000", "7-75 to under $100,000","8-100 to under $150,000","9-$150,000 or more"))
+user_income = st.selectbox(label = "What is your income?", options = ("1 - Less Than $10,000", "2 - 10 to under $20,000", "3 - 20 to under $30,000","4 - 30 to under $40,000","5 - 40 to under $50,000","6 - 50 to under $75,000", "7 - 75 to under $100,000","8 - 100 to under $150,000","9 - $150,000 or more"))
 
-user_education = st.selectbox(label = "What is your education level?", options = ("1-Less than High School 1-8", "2-No Diploma", "3-High School Graduate", "4-Some College, No Degree", "5-Associate Degree","6-Bachelor Degree","7-Some postgraduate no degree","8-Postgraduate or Professional Degree"))
+user_education = st.selectbox(label = "What is your education level?", options = ("1 - Less than High School 1-8", "2 - No Diploma", "3 - High School Graduate", "4 - Some College, No Degree", "5 - Associate Degree","6 - Bachelor Degree","7 - Some postgraduate no degree","8 - Postgraduate or Professional Degree"))
 
-user_parent = st.selectbox(label = "Are you a parent?", options = ("0 -False", "1-True"))
+user_parent = st.selectbox(label = "Are you a parent?", options = ("0 - False", "1 - True"))
 
-user_married = st.selectbox(label = "Are you married?", options = ("0-False", "1-True"))
+user_married = st.selectbox(label = "Are you married?", options = ("0 - False", "1 - True"))
 
-user_female = st.selectbox(label = "What is your gender?", options = ("0-Male", "1-Female", "3-Other"))
+user_female = st.selectbox(label = "What is your gender?", options = ("0 - Male", "1 - Female", "3 - Other"))
 
 user_age = st.slider("Choose Age")
 
