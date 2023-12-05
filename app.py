@@ -128,7 +128,7 @@ match user_female:
 #add button (if true st.button = ) if button ==True: 
 user_complete = st.button("Calculate")
 
-if user_compete == True:
+if user_complete == True:
 
 #creating user data
     User = pd.DataFrame(np.array([{income}, {education},{parent},{married},{female},{user_age}]).reshape(1,-1), 
