@@ -65,7 +65,7 @@ user_female = st.selectbox(label = "What is your gender?", options = ("0-Male", 
 user_age = st.text_input("What is your Age?")
 
 
-match income_list:
+match user_income:
     case "1-Less Than $10,000":
         income = 1
     case "2-10 to under $20,000":
@@ -86,7 +86,7 @@ match income_list:
         income = 9
 
 
-match education_list:
+match user_education:
     case "1-Less than High School 1-8":
         education = 1
     case "2-No Diploma":
@@ -104,19 +104,19 @@ match education_list:
     case "8-Postgraduate or Professional Degree":
         education = 8
 
-match parent_list:
+match user_parent:
     case "0 -False":
         parent = 0
     case "1-True":
         parent = 1
 
-match married_list:
+match user_married:
     case "0 -False":
         married = 0
     case "1-True":
         married = 1
 
-match gender_list:
+match user_female:
     case "0-Male":
         gender = 0
     case "1-Female":
