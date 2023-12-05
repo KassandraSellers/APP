@@ -118,11 +118,11 @@ match user_married:
 
 match user_female:
     case "0-Male":
-        gender = 0
+        female = 0
     case "1-Female":
-        gender = 1
+        female = 1
     case "3-Other":
-        gender = 0
+        female = 0
 
 
 #add button (if true st.button = ) if button ==True: 
