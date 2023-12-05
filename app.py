@@ -44,12 +44,11 @@ model = LogisticRegression(class_weight="balanced")
 # fit the model with data
 model.fit(x_train, y_train.values.ravel())
 
+st.markdown("<h1 style='text-align: center; color: grey;'>Hello and Welcome!</h1>", unsafe_allow_html=True)
 
-st.markdown("Hello and Welcome!")
+st.markdown("<h1 style='text-align: center; color: grey;'>Are you a LinkedIn user?</h1>", unsafe_allow_html=True)
 
-st.markdown("Are you a LinkedIn user?")
-
-st.markdown("Answer the questions to find out!")
+st.markdown("<h1 style='text-align: center; color: grey;'>Answer the questions to find out!</h1>", unsafe_allow_html=True)
 
       
 user_income = st.selectbox(label = "What is your income?", options = ("1-Less Than $10,000", "2-10 to under $20,000", "3-20 to under $30,000","4-30 to under $40,000","5-40 to under $50,000","6-50 to under $75,000", "7-75 to under $100,000","8-100 to under $150,000","9-$150,000 or more"))
