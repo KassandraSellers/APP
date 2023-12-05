@@ -64,6 +64,8 @@ user_female = st.selectbox(label = "What is your gender?", options = ("0-Male", 
 
 user_age = st.text_input("What is your Age?")
 
+user_age = int(user_age)
+
 
 match user_income:
     case "1-Less Than $10,000":
@@ -137,7 +139,7 @@ if user_complete == True:
     'parent' : parent,
     'married': married,
     'female' : female,
-    'age': int(user_age)
+    'age': user_age
 },index=[0])
 
     
