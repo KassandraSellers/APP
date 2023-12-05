@@ -131,8 +131,16 @@ user_complete = st.button("Calculate")
 if user_complete == True:
 
 #creating user data
-    User = pd.DataFrame(np.array([{income}, {education},{parent},{married},{female},{user_age}]).reshape(1,-1), 
-                    columns=['income','education','parent','married','female','age'])
+    User = pd.DataFrame({
+    'income': income,
+    'education': education,
+    'parent' : parent,
+    'married': married,
+    'female' : female,
+    'age': age
+},index=[0])
+
+    
 #Predicting outcome
     model.predict(User)
 
