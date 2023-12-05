@@ -62,9 +62,7 @@ user_married = st.selectbox(label = "Are you married?", options = ("0-False", "1
 
 user_female = st.selectbox(label = "What is your gender?", options = ("0-Male", "1-Female", "3-Other"))
 
-user_age = st.text_input("What is your Age?")
-
-user_age = int(user_age)
+user_age = st.slider("Choose Age")
 
 
 match user_income:
@@ -146,11 +144,10 @@ if user_complete == True:
 #Predicting outcome
     model.predict(User)
 
-    print(f"Predicted class: {model.predict(User)}")
-
 #generating Probability of postivie class (=1)
     probs = model.predict_proba(User)
 
-    print(f"Probability that this person has a linked in account: {probs[0][1]}")
 
+    st.write("Predicted class: {model.predict(User)}")
+    st.write("Probability that this person has a linked in account: {probs[0][1]}")
 
