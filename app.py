@@ -57,15 +57,15 @@ parent_list= list["0":"False", "1":"True"]
 married_list= list["0":"False", "1":"True"]
 gender_list= list["0":"Male", "1":"Female", "0":"Other"]
 
-user_income = st.selectbox(label = "What is your income?, Options = income_list")
+user_income = st.selectbox(label = "What is your income?", options = income_list)
 
-user_education = st.selectbox(label = "What is your education level?, Options = education_list")
+user_education = st.selectbox(label = "What is your education level?", options = education_list)
 
-user_parent = st.selectbox(label = "Are you a parent?, Options = parent_list")
+user_parent = st.selectbox(label = "Are you a parent?", options = parent_list)
 
-user_married = st.selectbox(label = "Are you married?, Options = married_list")
+user_married = st.selectbox(label = "Are you married?", options = married_list)
 
-user_female = st.selectbox(label = "What is your gender?, Options = gender_list")
+user_female = st.selectbox(label = "What is your gender?", options = gender_list)
 
 user_age = st.text_input("What is your Age?")
 
