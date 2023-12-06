@@ -141,12 +141,15 @@ if user_complete == True:
 
     
 #Predicting outcome
-    model.predict(User)
+    pclass = model.predict(User)
 
 #generating Probability of postivie class (=1)
     probs = model.predict_proba(User)
 
-
-    st.write("Predicted class:",model.predict(User))
-    st.write("Probability that this person has a linked in account:",round(probs[0][1],2))
+    if pclass == 1:
+        st.write("Predicted Class: You are a LinkedIn user!")
+    else:
+        st.write("Predicted Class: You are not a LinkedIn user."
+    #st.write("Predicted class:",model.predict(User))
+    st.write("Probability that you have a linked in account:",round(probs[0][1],2))
 
