@@ -149,7 +149,7 @@ if user_complete == True:
     if pclass == 1:
         st.write("Predicted Class: You are a LinkedIn user!")
     else:
-        st.write("Predicted Class: You are not a LinkedIn user."
+        st.write("Predicted Class: You are not a LinkedIn user.")
     #st.write("Predicted class:",model.predict(User))
     st.write("Probability that you have a linked in account:",round(probs[0][1],2))
 
