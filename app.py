@@ -44,13 +44,15 @@ model = LogisticRegression(class_weight="balanced")
 # fit the model with data
 model.fit(x_train, y_train.values.ravel())
 
+#build the site
+
 st.markdown("<h3 style='text-align: center; color: grey;'>Hello and Welcome!</h3>", unsafe_allow_html=True)
 
 st.markdown("<h4 style='text-align: center; color: grey;'>Are you a LinkedIn user?</h4>", unsafe_allow_html=True)
 
 st.markdown("<h4 style='text-align: center; color: grey;'>Answer the questions to find out!</h4>", unsafe_allow_html=True)
 
-      
+#input options      
 user_income = st.selectbox(label = "What is your income?", options = ("1 - Less Than $10,000", "2 - 10 to under $20,000", "3 - 20 to under $30,000","4 - 30 to under $40,000","5 - 40 to under $50,000","6 - 50 to under $75,000", "7 - 75 to under $100,000","8 - 100 to under $150,000","9 - $150,000 or more"))
 
 user_education = st.selectbox(label = "What is your education level?", options = ("1 - Less than High School 1-8", "2 - No Diploma", "3 - High School Graduate", "4 - Some College, No Degree", "5 - Associate Degree","6 - Bachelor Degree","7 - Some postgraduate no degree","8 - Postgraduate or Professional Degree"))
@@ -63,7 +65,7 @@ user_female = st.selectbox(label = "What is your gender?", options = ("0 - Male"
 
 user_age = st.slider("Choose Age")
 
-
+#changing input options to be compatible with data input
 match user_income:
     case "1 - Less Than $10,000":
         income = 1
@@ -124,7 +126,7 @@ match user_female:
         female = 0
 
 
-#add button (if true st.button = ) if button ==True: 
+#add button  
 user_complete = st.button("Calculate")
 
 if user_complete == True:
@@ -146,10 +148,11 @@ if user_complete == True:
 #generating Probability of postivie class (=1)
     probs = model.predict_proba(User)
 
+#Creating output
     if pclass == 1:
         st.write("Predicted Class: You are a LinkedIn user!")
     else:
         st.write("Predicted Class: You are not a LinkedIn user.")
-    #st.write("Predicted class:",model.predict(User))
+
     st.write("Probability that you have a linked in account:",round(probs[0][1],2))
 
